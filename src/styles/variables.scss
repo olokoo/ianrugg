@@ -1,0 +1,24 @@
+// Sizes
+$header-height: 75px;
+
+// Colors
+$color-white: #ffffff;
+
+$color-gray-1: #f7f7f7;
+$color-gray-2: #ececec;
+
+$color-black-0: #000000;
+$color-black-1: #222222;
+$color-black-2: #222222;
+
+$color-salmon: #ff4444;
+$color-seafoam: #0fcabf;
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Libre+Franklin:600,900&display=swap');
+$font-heading: 'Libre Franklin', sans-serif;
+$font-primary: 'Helvetica Neue', sans-serif;
+
+// Theme Colors
+$secondary-color: $color-seafoam;
+$footer-color: $color-gray-1;
