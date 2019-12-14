@@ -3,35 +3,33 @@ import { Link } from "gatsby"
 
 import Hero from "../components/hero"
 
-import { rhythm, scale } from "../utils/typography"
-
 class Layout extends React.Component {
   render() {
     const { location, title, children } = this.props;
     const rootPath = `${__PATH_PREFIX__}/`;
     const isHome = location.pathname === rootPath;
     const header = (
-      <h1 class="logo">
+      <h1 className="logo">
         <div>
-          <Link to={`/`} >IR</Link>
+          <Link to={`/`} >IAN RUGG</Link>
         </div>
       </h1>
     );
     return (
       <div>
-        <header class="main">
-          <div class="container">
+        <header className="main">
+          <div className="container">
             {header}
           </div>
         </header>
         {isHome && <Hero />}
         <main>
-          <div class="container">
+          <div className="container">
             {children}
           </div>
         </main>
         <footer>
-          <div class="container">
+          <div className="container">
             © {new Date().getFullYear()}, Built with
             {` `}
             <a href="https://olokoo.com">Olokoo Industries</a>

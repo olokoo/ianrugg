@@ -11,9 +11,9 @@ import Image from "gatsby-image"
 
 const Hero = () => {
   return (
-    <section class="hero">
-      <div class="container">
-        <div class="hero-heading">
+    <section className="hero">
+      <div className="container">
+        <div className="hero-heading">
           I build websites and stuff.
         </div>
       </div>
