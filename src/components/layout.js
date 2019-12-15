@@ -11,7 +11,9 @@ class Layout extends React.Component {
     const header = (
       <h1 className="logo">
         <div>
-          <Link to={`/`} >IAN RUGG</Link>
+          <Link to={`/`} >
+            <img src={'/images/icon.svg'} alt="Ian Rugg" />
+          </Link>
         </div>
       </h1>
     );

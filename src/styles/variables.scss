@@ -15,9 +15,19 @@ $color-salmon: #ff4444;
 $color-seafoam: #0fcabf;
 
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Work+Sans:600,900&display=swap');
-$font-heading: 'Work Sans', sans-serif;
+@font-face {
+	font-family: 'Spartan MB';
+	src: url('/fonts/spartanmb-black.woff2') format('woff2'),
+			 url('/fonts/spartanmb-black.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+$font-spartan: 'Spartan MB',Now,"HK Grotesk","Work Sans",Lato,"Helvetica Neue",Arial,sans-serif;
+
+$font-heading: $font-spartan;
 $font-primary: 'Helvetica Neue', sans-serif;
+
 
 // Theme Colors
 $secondary-color: $color-seafoam;
