@@ -33,7 +33,7 @@ const Bio = () => {
   const { author, social } = data.site.siteMetadata
   return (
     <div>
-      {/* <Image
+      <Image
         fixed={data.avatar.childImageSharp.fixed}
         alt={author}
         style={{
@@ -44,7 +44,7 @@ const Bio = () => {
         imgStyle={{
           borderRadius: `50%`,
         }}
-      /> */}
+      />
       <p>
         Written by <strong>{author}</strong>
       </p>
