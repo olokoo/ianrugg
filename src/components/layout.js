@@ -41,7 +41,7 @@ class Layout extends React.Component {
           <div className="container">
             © {new Date().getFullYear()}, Built with
             {` `}
-            <a href="https://olokoo.com">Olokoo Industries</a>
+            <a href="https://olokoo.com" target="_new">Olokoo Industries</a>
           </div>
         </footer>
       </div>

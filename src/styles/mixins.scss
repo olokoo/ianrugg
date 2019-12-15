@@ -45,6 +45,6 @@ $breakpoints: (
 		max-width: 900px;
 	}
 	@include respond-up('large') {
-		max-width: 1100px;
+		max-width: 1000px;
 	}
 }
