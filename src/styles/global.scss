@@ -23,6 +23,7 @@ header{
 		$logo-size: $header-height - 20px;
 
 		h1 {
+			float: left;
 			margin: 0;
 			padding: 0;
 			height: $header-height;
@@ -37,11 +38,21 @@ header{
 				color: $color-white;
 			}
 		}
+
+		nav {
+			float: right;
+			a {
+				height: $header-height;
+				line-height: $header-height;
+				font-size: 17px;
+			}
+		}
+
 	}
 }
 
 @mixin hero-heading-start {
-	box-shadow: inset -780px -10px 0 $color-white, inset 0 -25px 0 $secondary-color;
+	box-shadow: inset -780px -15px 0 $color-white, inset 0 -30px 0 $secondary-color;
 }
 
 @mixin hero-heading-end {
@@ -96,13 +107,46 @@ header{
 }
 
 a {
-	color: #111111;
-	box-shadow: none;
-	transition: all 0.3s;
 	text-decoration: none;
-	&:hover {
-		box-shadow: 0 2px 0 0 currentColor;
+	color: #111111;
+	margin: 0 auto;
+	padding: 0;
+	transition: all 0.2s ease-in-out;
+	position: relative;
+	&:before,
+	&:after {
+		content: "";
+		position: absolute;
+		bottom: -5px;
+		width: 0px;
+		height: 2px;
+		margin: 0;
+		transition: all 0.2s ease-in-out;
+		transition-duration: 0.15s;
+		opacity: 0;
+		background-color: $secondary-color;
+		left: 0;
 	}
+	&:hover {
+		&:before,
+		&:after {
+			width: 100%;
+			opacity: 1;
+		}
+	}
+	&.no-hover {
+		&:before,
+		&:after {
+			display: none;
+		}
+		&:hover {
+			&:before,
+			&:after {
+				display: none;
+			}
+		}
+	}
+
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -116,7 +160,21 @@ main {
 
 footer {
 	&.main {
-		padding: 30px 0;
+		box-sizing: border-box;
 		background-color: $footer-color;
+
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: $footer-height;
+		line-height: $footer-height;
+	}
+}
+
+.page-container {
+	position: relative;
+	min-height: 100vh;
+	.container-wrapper {
+		padding-bottom: $footer-height;
 	}
 }

@@ -9,27 +9,34 @@ class Layout extends React.Component {
     const rootPath = `${__PATH_PREFIX__}/`;
     const isHome = location.pathname === rootPath;
     const header = (
-      <h1 className="logo">
-        <div>
-          <Link to={`/`} >
-            <img src={'/images/icon.svg'} alt="Ian Rugg" />
+      <div className="container">
+        <h1 className="logo">
+          <div>
+            <Link to={`/`} className="no-hover" >
+              <img src={'/images/icon.svg'} alt="Ian Rugg" />
+            </Link>
+          </div>
+        </h1>
+        <nav>
+          <Link to={`/contact`} >
+            Contact me
           </Link>
-        </div>
-      </h1>
+        </nav>
+      </div>
     );
     return (
-      <div>
-        <header className="main">
-          <div className="container">
+      <div className="page-container">
+        <div className="container-wrapper">
+          <header className="main">
             {header}
+          </header>
+          {isHome && <Hero />}
+          <main>
+            <div className="container">
+              {children}
+            </div>
+          </main>
           </div>
-        </header>
-        {isHome && <Hero />}
-        <main>
-          <div className="container">
-            {children}
-          </div>
-        </main>
         <footer className="main">
           <div className="container">
             © {new Date().getFullYear()}, Built with
