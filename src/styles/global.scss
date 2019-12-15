@@ -127,7 +127,8 @@ a {
 		background-color: $secondary-color;
 		left: 0;
 	}
-	&:hover {
+	&:hover,
+	&[aria-current="page"] {
 		&:before,
 		&:after {
 			width: 100%;
