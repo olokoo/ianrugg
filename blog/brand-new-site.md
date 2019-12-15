@@ -1,5 +1,5 @@
 ---
-path: 'https://ianrugg.netlify.com/brand-new-site'
+path: brand-new-site
 date: 2019-12-15T17:52:39.644Z
 title: Brand New Site
 ---
