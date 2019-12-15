@@ -30,7 +30,7 @@ class Layout extends React.Component {
             {children}
           </div>
         </main>
-        <footer>
+        <footer className="main">
           <div className="container">
             © {new Date().getFullYear()}, Built with
             {` `}
