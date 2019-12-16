@@ -18,9 +18,15 @@ class Layout extends React.Component {
           </div>
         </h1>
         <nav>
-          <Link to={`/contact`} >
-            Contact me
-          </Link>
+          <input id="toggle" type="checkbox" />
+          <label class="toggle-container" for="toggle">
+            <div className="menu-btn"></div>
+          </label>
+          <div class="nav-menu">
+            <Link to={`/contact`} >
+              Contact me
+            </Link>
+          </div>
         </nav>
       </div>
     );
