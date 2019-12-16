@@ -30,7 +30,7 @@ class ContactPage extends React.Component {
 						</div>
 						<ul className="actions">
 							<li>
-								<input type="submit" value="Send Message" className="special" />
+								<input type="submit" value="Send Message" className="primary" />
 							</li>
 							<li>
 								<input type="reset" value="Clear" />
