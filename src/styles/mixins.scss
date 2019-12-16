@@ -36,7 +36,7 @@ $breakpoints: (
 }
 
 @mixin containerBreakpoints {
-	max-width: 94%;
+	max-width: 88%;
 
 	@include respond-up('small') {
 		max-width: 700px;
