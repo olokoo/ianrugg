@@ -23,6 +23,8 @@ header{
 		$logo-size: $header-height - 20px;
 
 		h1 {
+			position: absolute;
+			z-index: 10;
 			float: left;
 			margin: 0;
 			padding: 0;
@@ -77,19 +79,48 @@ header{
 				top: -100%;
 			}
 
-			.nav-menu {
+			.nav-menu-wrapper {
 				display: none;
 				position: fixed;
 				top: 0;
 				left: 0;
 				height: 100vh;
 				width: 100vw;
-				background-color: $color-black-1;
+				background-color: $color-black-2;
 				z-index: 9;
+
+				.nav-menu-inner {
+					width: 500px;
+					@media (max-width: 600px) {
+						width: 88%;
+					}
+					margin: 100px auto 0 auto;
+					.links {
+						list-style: none;
+						padding: 0;
+						li {
+							a {
+								border: 0;
+								border-top: 1px solid $color-black-5;
+								display: block;
+								font-size: .8em;
+								font-weight: 600;
+								letter-spacing: .25em;
+								line-height: 4em;
+								text-decoration: none;
+								text-transform: uppercase;
+								text-align: center;
+								color: $color-white;
+							}
+							&:first-child a {
+								border-top: 0 !important;
+							}
+						}
+					}
+				}
 			}
 
 			#toggle:checked {
-
 				& ~ .toggle-container .menu-btn {
 					&:before {
 						// box-shadow: 0 0 0 $color-white;
@@ -104,11 +135,9 @@ header{
 						margin-left: 0;
 					}
 				}
-
-				& ~ .nav-menu {
+				& ~ .nav-menu-wrapper {
 					display: block;
 				}
-
 			}
 		}
 

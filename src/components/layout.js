@@ -22,10 +22,26 @@ class Layout extends React.Component {
           <label class="toggle-container" for="toggle">
             <div className="menu-btn"></div>
           </label>
-          <div class="nav-menu">
-            <Link to={`/contact`} >
-              Contact me
-            </Link>
+          <div className="nav-menu-wrapper">
+            <div className="nav-menu-inner">
+              <ul className="links">
+                <li>
+                  <Link to={`/`} className="no-hover" >
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link to={`/blog`} className="no-hover" >
+                    My Blog
+                  </Link>
+                </li>
+                <li>
+                  <Link to={`/contact`} className="no-hover" >
+                    Contact me
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
         </nav>
       </div>
