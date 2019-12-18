@@ -16,6 +16,9 @@ const Hero = () => {
         <div className="hero-heading">
           I build websites and stuff.
         </div>
+        <div class="hero-content">
+          <p>My name is Ian Rugg and I like to build stuff. All different sorts of stuff. But professionally, I build websites for cool companies!</p>
+        </div>
       </div>
     </section>
   )

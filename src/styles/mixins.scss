@@ -48,3 +48,20 @@ $breakpoints: (
 		max-width: 1000px;
 	}
 }
+
+@mixin clear-fix($before) {
+	@if ($before == before) {
+		&:before {
+			content: ' ';
+			clear: both;
+			display: block;
+		}
+	}
+	@else {
+		&:after {
+			content: ' ';
+			clear: both;
+			display: block;
+		}
+	}
+}
