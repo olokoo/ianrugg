@@ -171,7 +171,20 @@ header{
 }
 
 .hero {
-	padding: 140px 0 0 0;
+	padding-top: 75px;
+	text-align: center;
+
+	@include respond-up('small') {
+		padding-top: 140px;
+		text-align: left;
+	}
+
+	.hero-heading-wrapper {
+		@include respond-down('small') {
+			margin-left: -6%;
+			margin-right: -6%;
+		}
+	}
 
 	.hero-heading {
 		display: inline;
@@ -205,12 +218,13 @@ header{
 	}
 
 	.hero-content {
-		width: 80%;
+		width: 100%;
+		margin-top: 60px;
 		@include respond-up('small') {
 			width: 50%;
 			padding-right: 30px;
+			margin-top: 70px;
 		}
-    margin-top: 70px;
     font-size: 21px;
     color: #000;
     line-height: 40px;
@@ -303,7 +317,7 @@ footer {
 
 		&.--left {
 			padding-right: 0;
-			padding-top: 90px;
+			padding-top: 50px;
 		}
 		&.--right {
 			padding-left: 0;
