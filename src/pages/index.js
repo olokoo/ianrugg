@@ -16,15 +16,17 @@ class BlogIndex extends React.Component {
         <section className="portfolio">
           <div className="column --left">
             <article className="project-card">
-              <div className="image-container"></div>
-              {/* <img src="https://olokoo.com/olokoo.com/wp2018/wp-content/uploads/2018/08/NotesWithCode.jpg" /> */}
+              <div className="image-container">
+                <img src="/images/portfolio/russell-athletic-logo.png" />
+              </div>
               <div className="project-content">
                 <h5>Russel Athletic</h5>
               </div>
             </article>
             <article className="project-card">
-              <div className="image-container"></div>
-              {/* <img src="https://olokoo.com/olokoo.com/wp2018/wp-content/uploads/2018/08/NotesWithCode.jpg" /> */}
+              <div className="image-container">
+                <img src="/images/portfolio/bulwark-logo.png" />
+              </div>
               <div className="project-content">
                 <h5>Bulwark</h5>
               </div>
@@ -32,17 +34,19 @@ class BlogIndex extends React.Component {
           </div>
           <div className="column --right">
             <article className="project-card">
-              <div className="image-container"></div>
-              {/* <img src="https://olokoo.com/olokoo.com/wp2018/wp-content/uploads/2018/08/NotesWithCode.jpg" /> */}
+              <div className="image-container">
+                <img className="nbteam-logo" src="/images/portfolio/nbteam-logo.png" />
+              </div>
               <div className="project-content">
-                <h5>RedKap</h5>
+                <h5>New Balance Team</h5>
               </div>
             </article>
             <article className="project-card">
-              <div className="image-container"></div>
-              {/* <img src="https://olokoo.com/olokoo.com/wp2018/wp-content/uploads/2018/08/NotesWithCode.jpg" /> */}
+              <div className="image-container">
+                <img className="redkap-logo" src="/images/portfolio/redkap-logo.png" />
+              </div>
               <div className="project-content">
-                <h5>Remindly.xyz</h5>
+                <h5>RedKap</h5>
               </div>
             </article>
           </div>
