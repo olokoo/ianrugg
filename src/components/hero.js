@@ -6,7 +6,8 @@
  */
 
 import React from "react"
-import Image from "gatsby-image"
+// import Image from "gatsby-image"
+import { Link } from "gatsby"
 
 
 const Hero = () => {
@@ -19,7 +20,7 @@ const Hero = () => {
           </div>
         </div>
         <div class="hero-content">
-          <p>My name is Ian Rugg and I like to build stuff. All different sorts of stuff. But professionally, I build websites for cool companies!</p>
+          <p>My name is Ian Rugg and I like to build stuff. All different sorts of stuff. But professionally, I build websites with my friends at <a href="https://redvanworkshop.com" target="_new">Red Van Workshop!</a></p>
         </div>
       </div>
     </section>
