@@ -35,7 +35,7 @@ $breakpoints: (
 	}
 }
 
-@mixin containerBreakpoints {
+@mixin container-breakpoints {
 	max-width: 88%;
 
 	@include respond-up('small') {
@@ -49,19 +49,39 @@ $breakpoints: (
 	}
 }
 
-@mixin clear-fix($before) {
-	@if ($before == before) {
-		&:before {
-			content: ' ';
-			clear: both;
-			display: block;
+@mixin clear-fix($pseudo: after) {
+	&:#{$pseudo} {
+		content: ' ';
+		clear: both;
+		display: block;
+	}
+}
+
+@mixin underline-link($state: inactive, $underlineHeight: 2px, $bottomPosition: -5px) {
+	@if ($state == inactive) {
+		text-decoration: none;
+		color: #111111;
+		position: relative;
+		&:before,
+		&:after {
+			content: "";
+			position: absolute;
+			bottom: $bottomPosition;
+			width: 0px;
+			height: $underlineHeight;
+			margin: 0;
+			transition: all 0.2s ease-in-out;
+			transition-duration: 0.15s;
+			opacity: 0;
+			background-color: $secondary-color;
+			left: 0;
 		}
 	}
 	@else {
+		&:before,
 		&:after {
-			content: ' ';
-			clear: both;
-			display: block;
+			width: 100%;
+			opacity: 1;
 		}
 	}
 }
