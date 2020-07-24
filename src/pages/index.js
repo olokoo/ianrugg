@@ -33,6 +33,7 @@ class Index extends React.Component {
                 </div>
                 <div className="project-content">
                   <h3 className="project-name">Bulwark</h3>
+                  <a className="view-project-link">View Project</a>
                 </div>
               </article>
             </Link>
@@ -45,6 +46,7 @@ class Index extends React.Component {
                 </div>
                 <div className="project-content">
                   <h3 className="project-name">New Balance Team</h3>
+                  <a className="view-project-link">View Project</a>
                 </div>
               </article>
             </Link>
@@ -55,6 +57,7 @@ class Index extends React.Component {
                 </div>
                 <div className="project-content">
                   <h3 className="project-name">RedKap</h3>
+                  <a className="view-project-link">View Project</a>
                 </div>
               </article>
             </Link>
