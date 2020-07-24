@@ -6,23 +6,23 @@ media_folder: content/assets
 public_folder: assets
 collections:
   - name: blog
-    slug: 'index'
-    preview_path: 'blog/index'
     label: Blog
     folder: content/blog
     create: true
     fields:
+      - { name: path, label: Path, widget: hidden, default: /blog}
       - { name: title, label: Title }
       - { name: date, label: Date, widget: datetime }
       - { name: description, label: Description }
       - { name: body, label: Body, widget: markdown }
 
   - name: projects
-    preview_path: "projects"
     label: Projects
     folder: content/projects
     create: true
     fields:
+      - { name: path, label: Path, widget: hidden, default: /projects}
       - { name: title, label: Title }
       - { name: description, label: Description }
+      - { name: headerImage, label: Header Image, widget: image }
       - { name: body, label: Body, widget: markdown }

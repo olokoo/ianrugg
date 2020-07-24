@@ -49,7 +49,10 @@ export const blogQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: {frontmatter: {path: {eq: "/blog"}}}
+      ) {
       edges {
         node {
           excerpt

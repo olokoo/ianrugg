@@ -19,7 +19,8 @@ exports.createPages = async ({ graphql, actions }) => {
                 slug
               }
               frontmatter {
-                title
+                title,
+                date
               }
             }
           }
@@ -32,16 +33,26 @@ exports.createPages = async ({ graphql, actions }) => {
     throw result.errors
   }
 
-  // Create blog posts pages.
+  // Create markdown pages.
   const posts = result.data.allMarkdownRemark.edges
 
   posts.forEach((post, index) => {
     const previous = index === posts.length - 1 ? null : posts[index + 1].node
     const next = index === 0 ? null : posts[index - 1].node
 
+    const isBlogURL = /\/blog\//;
+    const isProjectURL = /\/projects\//;
+
+    let component = blogPost;
+    if (isBlogURL.test(post.node.fields.slug)) {
+      component = blogPost;
+    } else if (isProjectURL.test(post.node.fields.slug)) {
+      component = projectPage;
+    }
+
     createPage({
       path: post.node.fields.slug,
-      component: blogPost,
+      component: component,
       context: {
         slug: post.node.fields.slug,
         previous,
@@ -50,20 +61,6 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   });
 
-  posts.forEach((post, index) => {
-    const previous = index === posts.length - 1 ? null : posts[index + 1].node
-    const next = index === 0 ? null : posts[index - 1].node
-
-    createPage({
-      path: post.node.fields.slug,
-      component: projectPage,
-      context: {
-        slug: post.node.fields.slug,
-        previous,
-        next,
-      },
-    })
-  });
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
@@ -74,7 +71,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       name: `slug`,
       node,
-      value,
+      value: `${node.frontmatter.path}${value}`,
     })
   }
 }

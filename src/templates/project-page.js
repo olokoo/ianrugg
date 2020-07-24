@@ -20,6 +20,7 @@ class ProjectTemplate extends React.Component {
         <article>
           <header>
             <h1>
+              TEST:
               {post.frontmatter.title}
             </h1>
           </header>
