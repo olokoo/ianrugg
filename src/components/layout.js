@@ -61,9 +61,18 @@ class Layout extends React.Component {
           </div>
         <footer className="main">
           <div className="container">
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://olokoo.com" target="_new">Olokoo Industries</a>
+            <div className="split-50">
+              <div className="footer-text">
+                © {new Date().getFullYear()}, Built with
+                {` `}
+                <a href="https://olokoo.com" target="_new">Olokoo Industries</a>
+              </div>
+            </div>
+            <div className="split-50 text-right">
+              <a href="https://trailblazer.me/id/ianrugg" target="_new" class="no-hover">
+                <img class="certification-badge" src={'/images/certifications/SF_B2C_Developer_Certification.png'} alt="Certified Commerce Cloud Digital Developer." />
+              </a>
+            </div>
           </div>
         </footer>
       </div>
