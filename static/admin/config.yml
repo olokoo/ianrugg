@@ -6,6 +6,8 @@ media_folder: content/assets
 public_folder: assets
 collections:
   - name: blog
+    slug: 'index'
+    preview_path: 'blog/index'
     label: Blog
     folder: content/blog
     create: true
@@ -14,7 +16,9 @@ collections:
       - { name: date, label: Date, widget: datetime }
       - { name: description, label: Description }
       - { name: body, label: Body, widget: markdown }
+
   - name: projects
+    preview_path: "projects"
     label: Projects
     folder: content/projects
     create: true
