@@ -8,7 +8,7 @@ public_folder: /assets
 collections:
   - name: blog
     label: Blog
-    folder: content/blog
+    folder: src/content/blog
     path: '{{slug}}/index'
     media_folder: ''
     public_folder: ''
@@ -22,7 +22,7 @@ collections:
 
   - name: projects
     label: Projects
-    folder: content/projects
+    folder: src/content/projects
     path: '{{slug}}/index'
     media_folder: ''
     public_folder: ''
