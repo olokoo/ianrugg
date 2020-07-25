@@ -29,7 +29,7 @@ class BlogPostTemplate extends React.Component {
           <section dangerouslySetInnerHTML={{ __html: post.html }} />
           <hr />
           <footer>
-            <Bio />
+            {/* <Bio /> */}
           </footer>
         </article>
 

@@ -405,3 +405,43 @@ footer {
 		}
 	}
 }
+
+// Projects Page
+
+.header-image-container {
+	position: relative;
+	padding-top: 30px;
+	padding-left: 20%;
+
+	.gatsby-image-wrapper {
+		box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
+	}
+
+	h1 {
+		position: absolute;
+		top: 70px;
+		left: 0;
+		background-color: $color-white;
+		padding: 0 25px 0 0;
+		font-size: 65px;
+	}
+
+	.visit-site-link {
+		position: absolute;
+		top: 250px;
+		left: 0;
+		font-size: 25px;
+		color: $color-black-0;
+		font-weight: 600;
+
+		&:before,
+		&:after {
+			height: 5px;
+			width: 30%;
+			opacity: 1;
+		}
+		&:hover {
+			@include underline-link(active);
+		}
+	}
+}

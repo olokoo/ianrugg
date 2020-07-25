@@ -2,12 +2,16 @@ backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
 
-media_folder: content/assets
-public_folder: assets
+media_folder: static/assets
+public_folder: /assets
+
 collections:
   - name: blog
     label: Blog
     folder: content/blog
+    path: '{{slug}}/index'
+    media_folder: ''
+    public_folder: ''
     create: true
     fields:
       - { name: path, label: Path, widget: hidden, default: /blog}
@@ -19,10 +23,14 @@ collections:
   - name: projects
     label: Projects
     folder: content/projects
+    path: '{{slug}}/index'
+    media_folder: ''
+    public_folder: ''
     create: true
     fields:
       - { name: path, label: Path, widget: hidden, default: /projects}
       - { name: title, label: Title }
       - { name: description, label: Description }
       - { name: headerImage, label: Header Image, widget: image }
+      - { name: projectUrl, label: Project Link }
       - { name: body, label: Body, widget: markdown }

@@ -4,6 +4,8 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Img from "gatsby-image"
+
 
 class ProjectTemplate extends React.Component {
   render() {
@@ -17,46 +19,16 @@ class ProjectTemplate extends React.Component {
           title={post.frontmatter.title + ' - Ian Rugg'}
           description={post.frontmatter.description || post.excerpt}
         />
-        <article>
+        <article style={{paddingBottom: '40px'}}>
           <header>
-            <h1>
-              TEST:
-              {post.frontmatter.title}
-            </h1>
+            <div className="header-image-container" style={{paddingBottom: '40px'}}>
+              <Img fluid={post.frontmatter.headerImage.childImageSharp.fluid} />
+              <h1>{post.frontmatter.title}</h1>
+              <a href={post.frontmatter.projectUrl} className="visit-site-link" target="_new">Visit site</a>
+            </div>
           </header>
           <section dangerouslySetInnerHTML={{ __html: post.html }} />
-          <hr />
-          <footer>
-            <Bio />
-          </footer>
         </article>
-
-        <nav>
-          <ul
-            style={{
-              display: `flex`,
-              flexWrap: `wrap`,
-              justifyContent: `space-between`,
-              listStyle: `none`,
-              padding: 0,
-            }}
-          >
-            <li>
-              {previous && (
-                <Link to={previous.fields.slug} rel="prev">
-                  ← {previous.frontmatter.title}
-                </Link>
-              )}
-            </li>
-            <li>
-              {next && (
-                <Link to={next.fields.slug} rel="next">
-                  {next.frontmatter.title} →
-                </Link>
-              )}
-            </li>
-          </ul>
-        </nav>
       </Layout>
     )
   }
@@ -78,6 +50,14 @@ export const pageQuery = graphql`
       frontmatter {
         title
         description
+        projectUrl
+        headerImage {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

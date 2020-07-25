@@ -2,7 +2,8 @@
 path: /projects
 title: Bulwark
 description: The leading name in FR and PPE technologies.
-headerImage: assets/ir-bulwark-project-header.png
+headerImage: ./ir-bulwark-project-header.png
+projectUrl: https://bulwark.com
 ---
 The Bulwark ecommerce site has been designed from the ground using bleeding edge SFRA from Salesforce.
 
