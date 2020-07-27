@@ -50,13 +50,13 @@ class Index extends React.Component {
                 </div>
               </article>
             </Link>
-            <Link to={`/projects/redkap`} className="project-card-link">
+            <Link to={`/projects/red-kap`} className="project-card-link">
               <article className="project-card">
                 <div className="image-container">
                   <img className="redkap-logo" src="/images/portfolio/redkap-logo.png" />
                 </div>
                 <div className="project-content">
-                  <h3 className="project-name">RedKap</h3>
+                  <h3 className="project-name">Red Kap</h3>
                   <a className="view-project-link">View Project</a>
                 </div>
               </article>
