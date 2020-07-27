@@ -16,7 +16,7 @@ const Hero = () => {
       <div className="container">
         <div className="hero-heading-wrapper">
           <div className="hero-heading">
-            I build websites and stuff.
+            I build websites.
           </div>
         </div>
         <div class="hero-content">
