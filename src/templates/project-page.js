@@ -19,7 +19,7 @@ class ProjectTemplate extends React.Component {
           title={post.frontmatter.title + ' - Ian Rugg'}
           description={post.frontmatter.description || post.excerpt}
         />
-        <article style={{paddingBottom: '40px'}}>
+        <article className="project-post" style={{paddingBottom: '40px'}}>
           <header>
             <div className="header-image-container" style={{paddingBottom: '40px'}}>
               <Img fluid={post.frontmatter.headerImage.childImageSharp.fluid} />
@@ -27,6 +27,17 @@ class ProjectTemplate extends React.Component {
               <a href={post.frontmatter.projectUrl} className="visit-site-link" target="_new">Visit site</a>
             </div>
           </header>
+          <section className="made-with-container">
+            <div className="made-with-badge-container">
+              <div className="made-with-badge">
+                <img src="/images/badges/redvan.png" />
+              </div>
+            </div>
+            <div className="made-with-disclaimer">
+              <p className="disclaimer-text">This project was made with Red Van Workshop during my employment.</p>
+              <p className="disclaimer-learn-more"><a href="/blog/redvanworkshop">Learn more</a> about Red Van Workshop.</p>
+            </div>
+          </section>
           <section dangerouslySetInnerHTML={{ __html: post.html }} />
         </article>
       </Layout>

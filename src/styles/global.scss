@@ -407,41 +407,82 @@ footer {
 }
 
 // Projects Page
-
-.header-image-container {
-	position: relative;
-	padding-top: 30px;
-	padding-left: 20%;
-
-	.gatsby-image-wrapper {
-		box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
+.project-post {
+	section {
+		font-size: 21px;
+		line-height: 1.5em;
+		padding-left: 20%;
+		color: $color-black-2;
 	}
 
-	h1 {
-		position: absolute;
-		top: 70px;
-		left: 0;
-		background-color: $color-white;
-		padding: 0 25px 0 0;
-		font-size: 65px;
-	}
-
-	.visit-site-link {
-		position: absolute;
-		top: 250px;
-		left: 0;
-		font-size: 25px;
-		color: $color-black-0;
-		font-weight: 600;
-
-		&:before,
-		&:after {
-			height: 5px;
-			width: 30%;
-			opacity: 1;
+	.made-with-container {
+		padding-left: 0;
+		.made-with-badge-container {
+			float: left;
+			width: 20%;
+			text-align: right;
+			padding-right: 25px;
+			box-sizing: border-box;
+			.made-with-badge {
+				img {
+					width: 75px;
+				}
+			}
 		}
-		&:hover {
-			@include underline-link(active);
+
+		.made-with-disclaimer {
+			float: left;
+			width: 80%;
+			color: $color-black-5;
+			font-size: 17px;
+			margin: 10px 0 40px;
+			p {
+				margin: 0;
+			}
+			.disclaimer-learn-more {
+				font-size: 13px;
+				margin-top: -5px;
+			}
+		}
+
+
+	}
+
+	.header-image-container {
+		position: relative;
+		padding-top: 30px;
+		padding-left: 20%;
+
+		.gatsby-image-wrapper {
+			box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
+		}
+
+		h1 {
+			position: absolute;
+			top: 70px;
+			left: 0;
+			background-color: $color-white;
+			padding: 0 25px 0 0;
+			font-size: 65px;
+		}
+
+		.visit-site-link {
+			position: absolute;
+			top: 250px;
+			left: 0;
+			font-size: 25px;
+			color: $color-black-0;
+			font-weight: 600;
+
+			&:before,
+			&:after {
+				height: 5px;
+				width: 30%;
+				opacity: 1;
+			}
+			&:hover {
+				@include underline-link(active);
+			}
 		}
 	}
 }
