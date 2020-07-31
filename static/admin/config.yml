@@ -34,3 +34,16 @@ collections:
       - { name: headerImage, label: Header Image, widget: image }
       - { name: projectUrl, label: Project Link }
       - { name: body, label: Body, widget: markdown }
+  - name: settings
+    label: Settings
+    files:
+      - file: src/content/settings/navigation.yml
+        label: Navigation
+        name: navigation
+        fields:
+          - label: Navigation
+            name: nav_items
+            widget: list
+            fields:
+              - {label: Label, name: label, widget: string}
+              - {label: Path, name: path, widget: string}
