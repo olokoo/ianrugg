@@ -1,7 +1,7 @@
 links:
-  - label: Home
-    path: /
   - label: My Blog
     path: /blog
   - label: Contact Me
     path: /contact
+  - label: Home
+    path: /
