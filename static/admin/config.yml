@@ -42,8 +42,15 @@ collections:
         name: navigation
         fields:
           - label: Navigation
-            name: nav_items
+            name: links
             widget: list
             fields:
               - {label: Label, name: label, widget: string}
               - {label: Path, name: path, widget: string}
+      - file: src/content/settings/home-page.yml
+        label: Home Page
+        name: homePage
+        fields:
+          - label: Hero Text
+            name: heroText
+            widget: markdown
