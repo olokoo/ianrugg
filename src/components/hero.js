@@ -1,5 +1,5 @@
-import React from "react"
-import homePage from '../content/settings/home-page.yml'
+import React from "react";
+import homePage from '../content/settings/home-page.yml';
 
 const Hero = () => {
   return (
