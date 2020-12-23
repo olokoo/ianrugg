@@ -1,5 +1,6 @@
 import React from "react";
 import homePage from '../content/settings/home-page.yml';
+import ReactMarkdown from 'react-markdown'
 
 const Hero = () => {
   return (
@@ -11,9 +12,9 @@ const Hero = () => {
           </div>
         </div>
         <div class="hero-content">
-          <p>
-            {homePage.heroText}
-          </p>
+          <ReactMarkdown>
+            { homePage.heroText }
+          </ReactMarkdown>
         </div>
       </div>
     </section>
