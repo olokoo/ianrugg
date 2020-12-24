@@ -1,0 +1,28 @@
+stackbitVersion: ~0.3.0
+staticDir: static  # folder with files that are copied to publishDir as is
+uploadDir: images  # folder with media files, relative to staticDir
+pagesDir: content/blog  # folder with markdown page files
+dataDir: content/settings      # folder with data files (yaml, json, toml)
+excludePages:
+  - example/**/*
+  - README.md
+models:
+  # The schema of the theme or a site
+  # see Models documentation for more info
+  settings:
+    type: data
+    label: Home
+    file: home-page.yml
+    fields:
+      - type: markdown
+        name: heroText
+        label: Hero Text
+        required: true
+
+  # post: # a model called "post"
+  #   type: page
+  #   label: Post
+  #   folder: posts
+  #   urlPath: "/blog/{slug}"
+  #   fields: # array of fields
+  #     ... # see Field documentation for more info

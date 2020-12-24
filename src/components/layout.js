@@ -61,7 +61,7 @@ class Layout extends React.Component {
               <div className="footer-text">
                 © {new Date().getFullYear()}, Built with
                 {` `}
-                <a href="https://olokoo.com" target="_new">Olokoo Industries</a>
+                <a href="https://olokoo.com" target="_new">Olokoo</a>
               </div>
             </div>
             <div className="split-50 text-right">
