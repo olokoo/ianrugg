@@ -1,0 +1,13 @@
+links:
+  - label: Featured
+    path: /blog/category/featured
+  - label: Recent
+    path: /blog/category/recent
+  - label: Finance
+    path: /blog/category/finance
+  - label: Coffee
+    path: /blog/category/coffee
+  - label: Internet
+    path: /blog/category/internet
+  - label: Reviews
+    path: /blog/category/reviews

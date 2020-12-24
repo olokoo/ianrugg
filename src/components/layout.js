@@ -55,6 +55,7 @@ class Layout extends React.Component {
           </main>
           </div>
         <footer className="main">
+          <script data-ad-client="ca-pub-7587637902084377" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
           <div className="container">
             <div className="split-50">
               <div className="footer-text">

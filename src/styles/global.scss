@@ -226,10 +226,6 @@ header{
 		text-align: left;
 	}
 
-	.hero-heading-wrapper {
-
-	}
-
 	.hero-heading {
 		display: inline;
 		font-weight: 900;
@@ -307,6 +303,93 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: $font-heading;
 	font-weight: 400;
 }
+
+// Blog Section //
+
+.blog-menu {
+	padding: 50px 0;
+	.links {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		li {
+			display: inline-block;
+			padding: 0 15px;
+			&:first-child {
+				padding-left: 0;
+			}
+			&:last-child {
+				padding-right: 0;
+			}
+			a {
+				text-transform: uppercase;
+				font-weight: bold;
+				font-size: 15px;
+				letter-spacing: 1px;
+			}
+		}
+	}
+}
+
+.blog-section {
+	.blog-section-header {
+		.eyebrow {
+			width: 90px;
+			height: 5px;
+			background-color: $color-seafoam;
+		}
+		.blog-section-header-title {
+			margin: 10px 0;
+			text-transform: uppercase;
+			font-weight: bold;
+			font-size: 15px;
+			letter-spacing: 1px;
+		}
+	}
+	.blog-list {
+		article {
+			margin: 45px 0;
+			@include clear-fix;
+			.blog-list-left-image {
+				display: inline-block;
+				width: 350px;
+				vertical-align: middle;
+			}
+			.blog-list-right-content {
+				width: 600px;
+				display: inline-block;
+				box-sizing: border-box;
+				padding-left: 45px;
+				vertical-align: middle;
+				padding-bottom: 15px;
+				h2 {
+					display: inline-block;
+					letter-spacing: 2px;
+					margin: 0;
+					@include underline-link(inactive, 4px, -2px);
+				}
+				small {
+					margin: 10px 0 0;
+					display: block;
+					color: $color-black-5;
+				}
+				p {
+					margin: 7px 0 0;
+					letter-spacing: 1px;
+    				line-height: 1.5em;
+				}
+			}
+			&:hover {
+				h2 {
+					@include underline-link(active, 4px, -2px);
+				}
+			}
+		}
+	}
+}
+
+// End Blog Section //
 
 footer {
 	&.main {

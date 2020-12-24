@@ -3,6 +3,8 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import blogNavigation from '../content/settings/blogNavigation.yml'
+import Img from "gatsby-image"
 
 class BlogPage extends React.Component {
   render() {
@@ -13,28 +15,62 @@ class BlogPage extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="Blog - Ian Rugg" />
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
-          return (
-            <article key={node.fields.slug}>
-              <header>
-                <h3>
-                  <Link to={node.fields.slug}>
-                    {title}
+        <div className="blog-menu">
+          <ul className="links">
+            {blogNavigation.links.map(link => {
+              return (
+                <li>
+                  <Link to={link.path}>
+                    {link.label}
                   </Link>
-                </h3>
-                <small>{node.frontmatter.date}</small>
-              </header>
-              <section>
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.description || node.excerpt,
-                  }}
-                />
-              </section>
-            </article>
-          )
-        })}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+        <div className="blog-section featured">
+          <header className="blog-section-header">
+            <div className="eyebrow"></div>
+            <div className="blog-section-header-title">
+              <span>Featured Articles</span>
+            </div>
+          </header>
+          <section className="blog-list">
+            {posts.map(({ node }) => {
+              const title = node.frontmatter.title || node.fields.slug
+              return (
+                <Link to={node.fields.slug} className="no-hover">
+                  <article key={node.fields.slug}>
+                    <div className="blog-list-left-image">
+                      <Img fluid={ node.frontmatter.featuredImage.childImageSharp.fluid } />
+                    </div>
+                    <div className="blog-list-right-content">
+                      <header>
+                        <h2>{ title }</h2>
+                        <small>{ node.frontmatter.date } - { node.frontmatter.category }</small>
+                      </header>
+                      <section>
+                        <p
+                          dangerouslySetInnerHTML={{
+                            __html: node.frontmatter.description || node.excerpt,
+                          }}
+                        />
+                      </section>
+                    </div>
+                  </article>
+                </Link>
+              )
+            })}
+          </section>
+        </div>
+        <div className="blog-section recent">
+          <header className="blog-section-header">
+            <div className="eyebrow"></div>
+            <div className="blog-section-header-title">
+              <span>Recent Articles</span>
+            </div>
+          </header>
+        </div>
       </Layout>
     )
   }
@@ -63,6 +99,14 @@ export const blogQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            category
+            featuredImage {
+              childImageSharp {
+                fluid(maxWidth: 350) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }
